@@ -1,0 +1,888 @@
+(* Content-type: application/vnd.wolfram.cdf.text *)
+
+(*** Wolfram CDF File ***)
+(* http://www.wolfram.com/cdf *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(***************************************************************************)
+(*                                                                         *)
+(*                                                                         *)
+(*  Under the Wolfram FreeCDF terms of use, this file and its content are  *)
+(*  bound by the Creative Commons BY-SA Attribution-ShareAlike license.    *)
+(*                                                                         *)
+(*        For additional information concerning CDF licensing, see:        *)
+(*                                                                         *)
+(*         www.wolfram.com/cdf/adopting-cdf/licensing-options.html         *)
+(*                                                                         *)
+(*                                                                         *)
+(***************************************************************************)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[      1088,         20]
+NotebookDataLength[     37698,        867]
+NotebookOptionsPosition[     11976,        327]
+NotebookOutlinePosition[     35595,        837]
+CellTagsIndexPosition[     35552,        834]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["1. Introduction", "Title",
+ CellChangeTimes->{{3.479957444023425*^9, 3.4799574458597393`*^9}, 
+   3.88578451054244*^9, 3.885785037660228*^9},
+ CounterAssignments->{{"Section", 0}, {"Subsection", 0}, {
+   "Chapter", 2}},ExpressionUUID->"07138757-1cd0-47bf-a66d-303753bf4cac"],
+
+Cell[TextData[{
+ "Paul Abbott\n",
+ ButtonBox["paul.c.abbott@uwa.edu.au",
+  BaseStyle->"Hyperlink",
+  ButtonData:>{
+    URL["mailto:paul.c.abbott@uwa.edu.au"], None}]
+}], "Subsubsubsection",
+ CellDingbat->None,
+ ShowGroupOpener->False,
+ CellChangeTimes->{{3.475757177608514*^9, 3.475757186308899*^9}, {
+  3.885784230622848*^9, 3.885784231809148*^9}},
+ CounterAssignments->{{"Section", 0}, {
+   "Subsection", 0}},ExpressionUUID->"5728a644-f033-4c00-84d7-019ea1753320"],
+
+Cell[CellGroupData[{
+
+Cell["Recommended Reading", "Section",
+ CellChangeTimes->{{3.443860508744885*^9, 3.443860513706809*^9}, {
+   3.443861858804888*^9, 3.443861862314537*^9}, 3.53256486708084*^9, {
+   3.5394795571639833`*^9, 3.539479559006481*^9}, {3.885784652304859*^9, 
+   3.885784656908682*^9}},ExpressionUUID->"5b09d4c0-6733-4d9f-8f26-\
+d0a86261bc51"],
+
+Cell["\<\
+M L Boas, Mathematical Methods in the Physical Sciences, 3rd edition, Wiley, \
+New York, 2006\
+\>", "Item",
+ CellChangeTimes->{
+  3.44392467135588*^9, {3.5726505478694277`*^9, 
+   3.572650548059761*^9}},ExpressionUUID->"442a157a-f7be-4e36-93f6-\
+ba3599453ea6"],
+
+Cell["\<\
+J Mathews and R L Walker, Mathematical Methods of Physics, W. A. Benjamin, \
+New York, 1970\
+\>", "Item",
+ CellChangeTimes->{
+  3.443924670820327*^9},ExpressionUUID->"d9c5bc91-8d7b-49e9-ae46-\
+1e6b4eaf0db5"],
+
+Cell[TextData[{
+ StyleBox["MathWorld",
+  FontSlant->"Italic"],
+ " \[RightTriangle] ",
+ ButtonBox["mathworld.wolfram.com",
+  BaseStyle->"Hyperlink",
+  ButtonData:>{
+    URL["http://mathworld.wolfram.com"], None}]
+}], "Item",
+ CellChangeTimes->{
+  3.443924672405448*^9},ExpressionUUID->"71b8f2b8-aa25-4d57-a705-\
+6ca49e339dd0"],
+
+Cell[TextData[{
+ "Digital Library of Mathematical Functions \[RightTriangle] ",
+ ButtonBox["dlmf.nist.gov",
+  BaseStyle->"Hyperlink",
+  ButtonData:>{
+    URL["http://dlmf.nist.gov"], None}]
+}], "Item",
+ CellChangeTimes->{
+  3.443924673381226*^9, {3.885785141749963*^9, 3.885785144960709*^9}, {
+   3.885785228293483*^9, 
+   3.885785240953001*^9}},ExpressionUUID->"09dd61a8-9475-4ac5-9f15-\
+5106357f4de3"],
+
+Cell[TextData[{
+ "The Mathematical Functions Site \[RightTriangle] ",
+ ButtonBox["functions.wolfram.com",
+  BaseStyle->"Hyperlink",
+  ButtonData:>{
+    URL["http://functions.wolfram.com"], None}]
+}], "Item",
+ CellChangeTimes->{
+  3.443924673381226*^9, {3.885785141749963*^9, 
+   3.885785144960709*^9}},ExpressionUUID->"e184484c-8f45-4d4e-b547-\
+95a9dbfc9242"],
+
+Cell[TextData[{
+ "L Shifrin, ",
+ StyleBox["Mathematica Programming: ",
+  FontSlant->"Italic"],
+ "an ",
+ StyleBox["advanced",
+  FontVariations->{"Underline"->True}],
+ " introduction \[RightTriangle] ",
+ ButtonBox["www.mathprogramming-intro.org",
+  BaseStyle->"Hyperlink",
+  ButtonData:>{
+    URL["http://www.mathprogramming-intro.org/"], None}]
+}], "Item",
+ CellChangeTimes->{{3.443924643479583*^9, 
+  3.4439246691315203`*^9}},ExpressionUUID->"86005c61-3aad-4900-b1fb-\
+42a8937bf571"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Assessment", "Section",
+ CellChangeTimes->{{3.443918310067369*^9, 3.4439183136708813`*^9}, {
+  3.885784698544531*^9, 
+  3.885784699410698*^9}},ExpressionUUID->"ed777865-6b98-4d4e-9683-\
+0a07fecc892d"],
+
+Cell["50% Exam in the Computer Laboratory", "Item",
+ CellChangeTimes->{{3.4440912619362373`*^9, 3.444091266055296*^9}, {
+  3.475757242380805*^9, 3.475757242771126*^9}, {3.50784352374196*^9, 
+  3.5078435240277643`*^9}, {3.885785375998911*^9, 
+  3.885785393868916*^9}},ExpressionUUID->"578a76fa-e9ee-46b3-9447-\
+3bf3672d0251"],
+
+Cell["\<\
+30% Weekly Assignments. Mark computed from best 10/11 assignments.\
+\>", "Item",
+ CellChangeTimes->{{3.444091269614903*^9, 3.4440912759376698`*^9}, {
+  3.444091310011148*^9, 3.44409131621089*^9}, {3.444091636218822*^9, 
+  3.444091637470121*^9}, {3.4757572862202587`*^9, 3.475757286530862*^9}, {
+  3.507843530154399*^9, 3.507843530842043*^9}, {3.507843682914816*^9, 
+  3.507843705819127*^9}},ExpressionUUID->"9cdcb8ad-c5cc-47c1-8f33-\
+2dcd82c378e6"],
+
+Cell["20% Mid-semester test on Wed 20 Apr 2011", "Item",
+ CellChangeTimes->{{3.444091294005519*^9, 3.444091296493142*^9}, {
+  3.4440916147331448`*^9, 3.444091632481537*^9}, {3.47575726394851*^9, 
+  3.475757276315221*^9}, {3.507843591606944*^9, 
+  3.507843595587967*^9}},ExpressionUUID->"2691d9e0-2e1c-4a4c-b2a7-\
+936b01bb922f"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Course Overview", "Section",
+ CellChangeTimes->{
+  3.443920435404665*^9, {3.507844572934016*^9, 
+   3.50784457402669*^9}},ExpressionUUID->"53b267a1-41a8-4de6-a970-\
+08d653124e7e"],
+
+Cell["\<\
+The tools you learn in this course are useful in all areas of mathematics, \
+physics, and engineering. Nearly all of the more advanced mathematical and \
+physical concepts are built from this mathematics.\
+\>", "Text",
+ CellChangeTimes->{{3.443921263270719*^9, 3.443921440714046*^9}, {
+   3.443951631907003*^9, 3.443951634406847*^9}, 3.444022625618189*^9, {
+   3.444191640365848*^9, 3.444191640708996*^9}, {3.444191690700963*^9, 
+   3.444191711623075*^9}, {3.4441917558719807`*^9, 3.44419177193058*^9}, {
+   3.44419182389872*^9, 3.444191860511894*^9}, {3.4441921606272984`*^9, 
+   3.4441921960992203`*^9}, 3.507844681213245*^9, {3.50784796335072*^9, 
+   3.507847963506033*^9}, 
+   3.885785416254612*^9},ExpressionUUID->"3e5c5c90-d125-41d9-905b-\
+e2a8df6e61d2"],
+
+Cell[CellGroupData[{
+
+Cell["This course has two aspects:", "Subsection",
+ CellChangeTimes->{{3.443918713305105*^9, 3.4439187162462187`*^9}, {
+   3.443920669279212*^9, 3.443920672473365*^9}, 
+   3.4757576501039762`*^9},ExpressionUUID->"3fa2834e-c17d-4995-bd73-\
+38410fdda714"],
+
+Cell[CellGroupData[{
+
+Cell["Mathematics", "Subsubsection",
+ CellChangeTimes->{{3.443920684074028*^9, 3.44392068659941*^9}, 
+   3.5078446314312057`*^9},ExpressionUUID->"99b8d248-8b06-4749-b457-\
+2e8aae6f9f66"],
+
+Cell["Vector spaces, matrices, and linear algebra", "Item",
+ CellChangeTimes->{{3.443920843095487*^9, 3.443920852581892*^9}, {
+  3.444192055976128*^9, 3.444192062511156*^9}, {3.507844364517514*^9, 
+  3.507844366976734*^9}},ExpressionUUID->"d6f79c13-87ff-43a4-855a-\
+87bb7673d9ae"],
+
+Cell["Calculus, ODEs and PDEs", "Item",
+ CellChangeTimes->{{3.443920843095487*^9, 3.443920852581892*^9}, {
+  3.4439209794327087`*^9, 3.443920989397335*^9}, {3.444192045106865*^9, 
+  3.444192050629323*^9}, {3.5078443878639*^9, 3.507844401129418*^9}, {
+  3.5078444526871977`*^9, 
+  3.507844456476787*^9}},ExpressionUUID->"d43a8948-4e93-4ce3-af50-\
+94d5405c1ff2"],
+
+Cell["Complex Algebra; Complex Functions", "Item",
+ CellChangeTimes->{{3.444191524123074*^9, 3.444191528457531*^9}, {
+  3.507844409640884*^9, 
+  3.5078444186550617`*^9}},ExpressionUUID->"1c19c341-447c-4de8-a373-\
+26e44eb3604d"],
+
+Cell["Fourier Series", "Item",
+ CellChangeTimes->{{3.444191524123074*^9, 3.444191528457531*^9}, {
+  3.507844409640884*^9, 
+  3.50784441919134*^9}},ExpressionUUID->"15efe0e0-fafd-4db7-92be-\
+e5e91498daae"],
+
+Cell["Special functions", "Item",
+ CellChangeTimes->{{3.444191524123074*^9, 3.444191528457531*^9}, 
+   3.507844409640884*^9},ExpressionUUID->"7def4c68-1832-4c10-aeba-\
+a6747a5093d7"],
+
+Cell["Variational methods and the action principle", "Item",
+ CellChangeTimes->{
+  3.443926312671969*^9, {3.44419152210106*^9, 3.444191522111158*^9}, {
+   3.444192069068149*^9, 3.444192071392078*^9}, 
+   3.5078444457610073`*^9},ExpressionUUID->"86ee177f-e9e5-427f-88bb-\
+4341040fd4f8"],
+
+Cell["Nonlinear systems", "Item",
+ CellChangeTimes->{
+  3.443926312671969*^9, {3.44419152210106*^9, 3.444191522111158*^9}, {
+   3.444192069068149*^9, 3.444192071392078*^9}, {3.5078444457610073`*^9, 
+   3.507844446226323*^9}},ExpressionUUID->"d5764c90-413b-4759-b09c-\
+cde423c67ca5"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Mathematica",
+ FontSlant->"Italic"]], "Subsubsection",
+ CellChangeTimes->{{3.443920684074028*^9, 3.44392068659941*^9}, {
+   3.443920743725315*^9, 3.443920743896599*^9}, {3.443951623678174*^9, 
+   3.4439516273653097`*^9}, 
+   3.50784463326156*^9},ExpressionUUID->"0ec9b3e1-f004-4a8f-9a15-\
+c1693a805625"],
+
+Cell[TextData[{
+ "How ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " works"
+}], "Item",
+ CellChangeTimes->{{3.4439207838836527`*^9, 3.443920794030621*^9}, {
+  3.507844495333783*^9, 
+  3.5078445117287292`*^9}},ExpressionUUID->"a00a7143-0672-4d2f-975c-\
+26ea7805ef7a"],
+
+Cell[TextData[{
+ "Basics of ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " programming"
+}], "Item",
+ CellChangeTimes->{{3.4439207838836527`*^9, 3.443920794030621*^9}, {
+   3.443921009655356*^9, 3.4439210318316097`*^9}, {3.4440226105089493`*^9, 
+   3.444022616056616*^9}, {3.4441921006495*^9, 3.4441921139952517`*^9}, {
+   3.50784424327325*^9, 3.507844246875372*^9}, 
+   3.507844339449607*^9},ExpressionUUID->"b77ec2a0-9645-4ce9-94be-\
+4b5d7a64ee8d"],
+
+Cell[TextData[{
+ "Dynamic functionality; use of ",
+ Cell[BoxData[
+  ButtonBox["Manipulate",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Manipulate"]],ExpressionUUID->
+  "7713177a-d74a-46ba-8282-e010de9f0171"]
+}], "Item",
+ CellChangeTimes->{{3.4439207838836527`*^9, 3.443920794030621*^9}, {
+   3.443921009655356*^9, 3.4439210318316097`*^9}, {3.4440226105089493`*^9, 
+   3.444022616056616*^9}, {3.4441921006495*^9, 3.4441921139952517`*^9}, {
+   3.50784424327325*^9, 3.507844246875372*^9}, {3.507844339449607*^9, 
+   3.507844349806704*^9}, 
+   3.507844653015354*^9},ExpressionUUID->"e7861c14-e3c3-4106-9913-\
+4e5eaf6dad5c"],
+
+Cell["Notebooks and Typesetting", "Item",
+ CellChangeTimes->{{3.4439207838836527`*^9, 3.443920794030621*^9}, {
+  3.443921009655356*^9, 3.4439210318316097`*^9}, {3.4440226105089493`*^9, 
+  3.444022616056616*^9}, {3.4441921006495*^9, 3.4441921139952517`*^9}, {
+  3.50784424327325*^9, 3.507844246875372*^9}, {3.507844339449607*^9, 
+  3.507844350782641*^9}},ExpressionUUID->"79151239-2290-4892-98f1-\
+d5c4a212f53f"],
+
+Cell[TextData[{
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " applied to the above areas of mathematics"
+}], "Item",
+ CellChangeTimes->{{3.4439207838836527`*^9, 3.443920794030621*^9}, {
+  3.443921009655356*^9, 3.4439210318316097`*^9}, {3.4441920832006187`*^9, 
+  3.44419208442277*^9}, {3.5078445313721933`*^9, 
+  3.507844535301346*^9}},ExpressionUUID->"447ac0c5-ed18-4bda-b317-\
+c1e17b921199"]
+}, Closed]]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+},
+AutoGeneratedPackage->None,
+WindowSize->{1366, 746},
+WindowMargins->{{Automatic, 88}, {Automatic, 130}},
+DockedCells->{
+  Cell[
+   BoxData[
+    GridBox[{{
+       StyleBox["Math2200: Applied Mathematics", Large, "Title"]}}]], 
+   GridBoxOptions -> {
+    GridBoxAlignment -> {"Columns" -> {{Left, Right}}}, 
+     GridBoxItemSize -> {"Columns" -> {
+         Scaled[0.79], {
+          Scaled[0.2]}}}}, "Title", CellSize -> {100, 30}, TextAlignment -> 
+   Left, CellMargins -> {{0, 0}, {0, 0}}, CellTags -> "DockedTitle"]},
+ShowSelection->True,
+ShowGroupOpener->False,
+ShowCellLabel->False,
+Magnification:>FEPrivate`If[
+  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.25, 1.25 Inherited],
+TooltipBoxOptions->{TooltipDelay->Automatic},
+FrontEndVersion->"13.1 for Mac OS X x86 (64-bit) (June 16, 2022)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Default.nb"]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Title and Section Cells", "Section"], 
+      Cell[
+      "NB: There is automatically a docked title cell.  See the Notebook \
+definitions above.", "Text", 
+       CellChangeTimes -> {{3.475559483038904*^9, 3.4755595217753477`*^9}}], 
+      Cell[
+       CellGroupData[{
+         Cell["Titles", "Subsection"], 
+         Cell[
+          CellGroupData[{
+            Cell[
+             StyleData["Title"], ShowCellBracket -> False, ShowSelection -> 
+             True, ShowGroupOpener -> False, CellMargins -> {{0, 0}, {0, 0}}, 
+             FontSize -> 22, FontWeight -> "SemiBold", FontColor -> 
+             RGBColor[0.96, 0.96, 0.96], Background -> 
+             RGBColor[0.255, 0, 0], $CellContext`MenuPosition -> 
+             None, $CellContext`MenuCommandKey -> None], 
+            Cell[
+             StyleData["Title", "SlideShow"], ShowCellBracket -> False, 
+             ShowSelection -> True, ShowGroupOpener -> False, 
+             CellMargins -> {{0, 0}, {0, 0}}, FontSize -> 22, FontWeight -> 
+             "SemiBold", FontColor -> RGBColor[0.96, 0.96, 0.96], Background -> 
+             RGBColor[0.255, 0, 0], $CellContext`MenuPosition -> 
+             None, $CellContext`MenuCommandKey -> None], 
+            Cell[
+             StyleData["Title", "Printout"], ShowCellBracket -> False, 
+             ShowSelection -> True, ShowGroupOpener -> False, 
+             CellMargins -> {{0, 0}, {0, 0}}, FontSize -> 22, FontWeight -> 
+             "SemiBold", $CellContext`MenuPosition -> 
+             None, $CellContext`MenuCommandKey -> None]}, Closed]], 
+         Cell[
+          CellGroupData[{
+            Cell[
+             StyleData["Subtitle"], ShowCellBracket -> False, ShowSelection -> 
+             True, ShowGroupOpener -> False, CellMargins -> {{0, 0}, {0, 0}}, 
+             FontSize -> 18, FontWeight -> "SemiBold", FontColor -> 
+             RGBColor[0.96, 0.96, 0.96], Background -> 
+             RGBColor[0.355, 0, 0], $CellContext`MenuPosition -> 
+             None, $CellContext`MenuCommandKey -> None], 
+            Cell[
+             StyleData["Subtitle", "SlideShow"], ShowCellBracket -> False, 
+             ShowSelection -> True, ShowGroupOpener -> False, 
+             CellMargins -> {{0, 0}, {0, 0}}, FontSize -> 18, FontWeight -> 
+             "SemiBold", FontColor -> RGBColor[0.96, 0.96, 0.96], Background -> 
+             RGBColor[0.355, 0, 0], $CellContext`MenuPosition -> 
+             None, $CellContext`MenuCommandKey -> None], 
+            Cell[
+             StyleData["Subtitle", "Printout"], ShowCellBracket -> False, 
+             ShowSelection -> True, ShowGroupOpener -> False, 
+             CellMargins -> {{0, 0}, {0, 0}}, FontSize -> 18, FontWeight -> 
+             "SemiBold", $CellContext`MenuPosition -> 
+             None, $CellContext`MenuCommandKey -> None]}, Closed]], 
+         Cell[
+          CellGroupData[{
+            Cell[
+             StyleData["Subsubtitle"], ShowCellBracket -> False, 
+             ShowSelection -> True, ShowGroupOpener -> False, 
+             CellMargins -> {{0, 0}, {0, 0}}, FontSize -> 14, FontWeight -> 
+             "SemiBold", FontColor -> RGBColor[0.96, 0.96, 0.96], Background -> 
+             RGBColor[0.455, 0, 0], $CellContext`MenuPosition -> 
+             None, $CellContext`MenuCommandKey -> None], 
+            Cell[
+             StyleData["Subsubtitle", "SlideShow"], ShowCellBracket -> False, 
+             ShowSelection -> True, ShowGroupOpener -> False, 
+             CellMargins -> {{0, 0}, {0, 0}}, FontSize -> 14, FontWeight -> 
+             "SemiBold", FontColor -> RGBColor[0.96, 0.96, 0.96], Background -> 
+             RGBColor[0.455, 0, 0], $CellContext`MenuPosition -> 
+             None, $CellContext`MenuCommandKey -> None], 
+            Cell[
+             StyleData["Subsubtitle", "Printout"], ShowCellBracket -> False, 
+             ShowSelection -> True, ShowGroupOpener -> False, 
+             CellMargins -> {{0, 0}, {0, 0}}, FontSize -> 14, FontWeight -> 
+             "SemiBold", $CellContext`MenuPosition -> 
+             None, $CellContext`MenuCommandKey -> None]}, Closed]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+         "Sections", "Subsection", 
+          CellChangeTimes -> {{3.443916926560617*^9, 
+           3.4439169279993553`*^9}}], 
+         Cell[
+          CellGroupData[{
+            Cell[
+             StyleData["Section"], CellDingbat -> TextData[{
+                CounterBox["Section"], ". "}], ShowGroupOpener -> True, 
+             WholeCellGroupOpener -> True, 
+             CounterAssignments -> {{"Subsection", 0}, {"Subsubsection", 0}, {
+               "DisplayFormulaNumbered", 0}, {"Theorem", 0}}, FontColor -> 
+             RGBColor[0, 0, 0.498039]], 
+            Cell[
+             StyleData["Section", "Presentation"], CellDingbat -> TextData[{
+                CounterBox["Section"], ". "}], 
+             CounterAssignments -> {{"Subsection", 0}, {"Subsubsection", 0}, {
+               "DisplayFormulaNumbered", 0}, {"Theorem", 0}}, FontColor -> 
+             RGBColor[0, 0, 0.498039]], 
+            Cell[
+             StyleData["Section", "Condensed"], CellDingbat -> TextData[{
+                CounterBox["Section"], ". "}], 
+             CellMargins -> {{28, Inherited}, {6, 12}}, 
+             CounterAssignments -> {{"Subsection", 0}, {"Subsubsection", 0}, {
+               "DisplayFormulaNumbered", 0}, {"Theorem", 0}}, FontColor -> 
+             RGBColor[0, 0, 0.498039]], 
+            Cell[
+             StyleData["Section", "Printout"], CellDingbat -> TextData[{
+                CounterBox["Section"], ". "}], 
+             CounterAssignments -> {{"Subsection", 0}, {"Subsubsection", 0}, {
+               "DisplayFormulaNumbered", 0}, {"Theorem", 0}}, FontColor -> 
+             GrayLevel[0]]}, Closed]], 
+         Cell[
+          CellGroupData[{
+            Cell[
+             StyleData["Subsection"], CellDingbat -> TextData[{
+                CounterBox["Section"], ".", 
+                CounterBox["Subsection"]}], ShowGroupOpener -> True, 
+             WholeCellGroupOpener -> True, FontColor -> 
+             RGBColor[0, 0.333333, 0]], 
+            Cell[
+             StyleData["Subsection", "Presentation"], CellDingbat -> TextData[{
+                CounterBox["Section"], ".", 
+                CounterBox["Subsection"]}], 
+             CellChangeTimes -> {3.47458489839288*^9}, FontColor -> 
+             RGBColor[0, 0.333333, 0]], 
+            Cell[
+             StyleData["Subsection", "Condensed"], CellDingbat -> TextData[{
+                CounterBox["Section"], ".", 
+                CounterBox["Subsection"]}], 
+             CellMargins -> {{30, Inherited}, {6, 12}}, FontColor -> 
+             RGBColor[0, 0.333333, 0]], 
+            Cell[
+             StyleData["Subsection", "Printout"], CellDingbat -> TextData[{
+                CounterBox["Section"], ".", 
+                CounterBox["Subsection"]}], FontColor -> GrayLevel[0]]}, 
+           Closed]], 
+         Cell[
+          CellGroupData[{
+            Cell[
+             StyleData["Subsubsection"], CellDingbat -> TextData[{
+                CounterBox["Section"], ".", 
+                CounterBox["Subsection"], ".", 
+                CounterBox["Subsubsection"]}], ShowGroupOpener -> True, 
+             WholeCellGroupOpener -> True, FontColor -> 
+             RGBColor[0, 0, 0.368627]], 
+            Cell[
+             StyleData["Subsubsection", "Presentation"], CellDingbat -> 
+             TextData[{
+                CounterBox["Section"], ".", 
+                CounterBox["Subsection"], ".", 
+                CounterBox["Subsubsection"]}], FontColor -> 
+             RGBColor[0, 0, 0.368627]], 
+            Cell[
+             StyleData["Subsubsection", "Condensed"], CellDingbat -> TextData[{
+                CounterBox["Section"], ".", 
+                CounterBox["Subsection"], ".", 
+                CounterBox["Subsubsection"]}], 
+             CellMargins -> {{30, Inherited}, {6, 12}}, FontColor -> 
+             RGBColor[0, 0, 0.368627]], 
+            Cell[
+             StyleData["Subsubsection", "Printout"], CellDingbat -> 
+             TextData[{
+                CounterBox["Section"], ".", 
+                CounterBox["Subsection"], ".", 
+                CounterBox["Subsubsection"]}], FontColor -> GrayLevel[0]]}, 
+           Closed]], 
+         Cell[
+          CellGroupData[{
+            Cell[
+             StyleData["Subsubsubsection"], FontColor -> 
+             RGBColor[0, 0.262745, 0], $CellContext`MenuPosition -> 1355], 
+            Cell[
+             StyleData["Subsubsubsection", "Presentation"], FontColor -> 
+             RGBColor[0, 0.262745, 0], $CellContext`MenuPosition -> 1355], 
+            Cell[
+             StyleData["Subsubsubsection", "Printout"], 
+             CellMargins -> {{Inherited, 0}, {7, 14}}, FontColor -> 
+             GrayLevel[0], $CellContext`MenuPosition -> 1355]}, Closed]], 
+         Cell[
+          CellGroupData[{
+            Cell[
+             StyleData["Subsubsubsubsection"], $CellContext`MenuPosition -> 
+             1356], 
+            Cell[
+             StyleData[
+             "Subsubsubsubsection", 
+              "Presentation"], $CellContext`MenuPosition -> 1356], 
+            Cell[
+             StyleData["Subsubsubsubsection", "Printout"], 
+             CellMargins -> {{Inherited, 0}, {7, 
+               14}}, $CellContext`MenuPosition -> 1356]}, Closed]]}, Open]]}, 
+     Open]], 
+   Cell[
+    CellGroupData[{
+      Cell[
+      "Theorem-Proof", "Section", 
+       CellChangeTimes -> {{3.443916926560617*^9, 3.4439169279993553`*^9}, {
+        3.469269419329535*^9, 3.469269424322864*^9}}], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Theorem"], CellDingbat -> TextData[{
+             StyleBox["Thm", FontWeight -> "Bold"], " ", 
+             CounterBox["Section"], ".", 
+             CounterBox["Theorem"], "  "}], CellMargins -> {{50, 10}, {7, 7}},
+           CellGroupingRules -> {"SectionGrouping", 80}, 
+          CounterIncrements -> {"Theorem", 1}, $CellContext`MenuPosition -> 
+          1800], 
+         Cell[
+          StyleData["Theorem", "Presentation"], CellDingbat -> TextData[{
+             StyleBox["Thm", FontWeight -> "Bold"], " ", 
+             CounterBox["Section"], ".", 
+             CounterBox["Theorem"], "  "}], CellMargins -> {{50, 10}, {7, 7}},
+           CellGroupingRules -> {"SectionGrouping", 80}, 
+          CounterIncrements -> {"Theorem", 1}, FontSize -> 
+          24, $CellContext`MenuPosition -> 1360], 
+         Cell[
+          StyleData["Theorem", "Printout"], CellDingbat -> TextData[{
+             StyleBox["Thm", FontWeight -> "Bold"], " ", 
+             CounterBox["Section"], ".", 
+             CounterBox["Theorem"], "  "}], CellMargins -> {{50, 10}, {7, 7}},
+           CellGroupingRules -> {"SectionGrouping", 80}, 
+          CounterIncrements -> {"Theorem", 1}, $CellContext`MenuPosition -> 
+          1360]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Proof"], CellDingbat -> TextData[{
+             StyleBox["Proof:", FontSlant -> "Italic"], ""}], 
+          CellMargins -> {{60, 10}, {7, 7}}, 
+          CellGroupingRules -> {
+           "SectionGrouping", 85}, $CellContext`MenuPosition -> 1810], 
+         Cell[
+          StyleData["Proof", "Presentation"], CellDingbat -> TextData[{
+             StyleBox["Proof:", FontSlant -> "Italic"], ""}], 
+          CellMargins -> {{60, 10}, {7, 7}}, 
+          CellGroupingRules -> {"SectionGrouping", 85}, FontSize -> 
+          24, $CellContext`MenuPosition -> 1365], 
+         Cell[
+          StyleData["Proof", "Printout"], CellDingbat -> TextData[{
+             StyleBox["Proof:", FontSlant -> "Italic"], ""}], 
+          CellMargins -> {{60, 10}, {7, 7}}, 
+          CellGroupingRules -> {
+           "SectionGrouping", 85}, $CellContext`MenuPosition -> 1365]}, 
+        Closed]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Formulas and Programming", "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["InlineFormula"], CellMargins -> {{10, 4}, {0, 8}}, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "\[Continuation]"},
+           LanguageCategory -> "Formula", ScriptLevel -> 1, 
+          SingleLetterItalics -> True, $CellContext`StripStyleOnPaste -> 
+          True, $CellContext`MenuPosition -> 1650], 
+         Cell[
+          StyleData["InlineFormula", "Presentation"], 
+          CellMargins -> {{10, 4}, {0, 12}}, LineSpacing -> {1, 5}, FontSize -> 
+          24], 
+         Cell[
+          StyleData["InlineFormula", "Condensed"], 
+          CellMargins -> {{8, 10}, {6, 6}}, LineSpacing -> {1, 1}, FontSize -> 
+          11], 
+         Cell[
+          StyleData["InlineFormula", "Printout"], 
+          CellMargins -> {{2, 0}, {6, 6}}]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["DisplayFormula"], 
+          CellMargins -> {{60, Inherited}, {Inherited, Inherited}}, 
+          CellGroupingRules -> "NormalGrouping", DefaultFormatType -> 
+          DefaultInputFormatType, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "\[Continuation]"},
+           LanguageCategory -> "Formula", ScriptLevel -> 0, 
+          SingleLetterItalics -> True, 
+          UnderoverscriptBoxOptions -> {
+           LimitsPositioning -> True}, $CellContext`StripStyleOnPaste -> 
+          True, $CellContext`MenuPosition -> 1700], 
+         Cell[
+          StyleData["DisplayFormula", "Presentation"], 
+          CellMargins -> {{60, Inherited}, {1.5 Inherited, 1.5 Inherited}}, 
+          LineSpacing -> {1, 5}, FontSize -> 24], 
+         Cell[
+          StyleData["DisplayFormula", "Condensed"], LineSpacing -> {1, 1}, 
+          FontSize -> 11], 
+         Cell[
+          StyleData["DisplayFormula", "Printout"]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["DisplayFormulaNumbered"], 
+          CellMargins -> {{60, Inherited}, {Inherited, Inherited}}, 
+          ShowCellLabel -> True, CellFrameLabels -> {{None, 
+             Cell[
+              TextData[{"(", 
+                CounterBox["Section"], ".", 
+                CounterBox["DisplayFormulaNumbered"], ")"}]]}, {None, None}}, 
+          DefaultFormatType -> DefaultInputFormatType, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "\[Continuation]"},
+           LanguageCategory -> "Formula", ScriptLevel -> 0, 
+          SingleLetterItalics -> True, CounterIncrements -> 
+          "DisplayFormulaNumbered", 
+          UnderoverscriptBoxOptions -> {
+           LimitsPositioning -> True}, $CellContext`StripStyleOnPaste -> 
+          True, $CellContext`MenuPosition -> 1710], 
+         Cell[
+          StyleData["DisplayFormulaNumbered", "Presentation"], 
+          CellMargins -> {{60, Inherited}, {1.5 Inherited, 1.5 Inherited}}, 
+          CellFrameLabels -> {{None, 
+             Cell[
+              TextData[{"(", 
+                CounterBox["Section"], ".", 
+                CounterBox["DisplayFormulaNumbered"], ")"}]]}, {None, None}}, 
+          LineSpacing -> {1, 5}, FontSize -> 24], 
+         Cell[
+          StyleData["DisplayFormulaNumbered", "Condensed"], 
+          CellFrameLabels -> {{None, 
+             Cell[
+              TextData[{"(", 
+                CounterBox["Section"], ".", 
+                CounterBox["DisplayFormulaNumbered"], ")"}]]}, {None, None}}, 
+          LineSpacing -> {1, 1}, FontSize -> 11], 
+         Cell[
+          StyleData["DisplayFormulaNumbered", "Printout"]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Program"], CellFrame -> {{0, 0}, {0.5, 0.5}}, 
+          CellMargins -> {{60, 4}, {0, 8}}, Hyphenation -> False, 
+          LanguageCategory -> "Formula", ScriptLevel -> 1, FontFamily -> 
+          "Courier", $CellContext`StripStyleOnPaste -> 
+          True, $CellContext`MenuPosition -> 1800], 
+         Cell[
+          StyleData["Program", "Presentation"], CellFrame -> {{0, 0}, {1, 1}},
+           CellMargins -> {{60, 4}, {0, 12}}, LineSpacing -> {1, 5}, FontSize -> 
+          24], 
+         Cell[
+          StyleData["Program", "Condensed"], CellMargins -> {{8, 10}, {6, 6}},
+           LineSpacing -> {1, 1}, FontSize -> 11], 
+         Cell[
+          StyleData["Program", "Printout"], CellMargins -> {{2, 0}, {6, 6}}]},
+         Closed]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell[
+      "References", "Section", 
+       CellChangeTimes -> {{3.443916926560617*^9, 3.4439169279993553`*^9}, {
+        3.469269419329535*^9, 3.469269424322864*^9}, {3.469271823780828*^9, 
+        3.469271825171331*^9}}], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Reference"], CellDingbat -> TextData[{"[", 
+             CounterBox["Reference"], "]"}], 
+          CellMargins -> {{60, 10}, {7, 7}}, 
+          CounterIncrements -> {"Reference", 1}, $CellContext`MenuPosition -> 
+          1990], 
+         Cell[
+          StyleData["Reference", "Presentation"], CellDingbat -> 
+          TextData[{"[", 
+             CounterBox["Reference"], "]"}], 
+          CellMargins -> {{60, 10}, {7, 7}}, 
+          CounterIncrements -> {"Reference", 1}, FontSize -> 18], 
+         Cell[
+          StyleData["Reference", "Printout"], CellDingbat -> TextData[{"[", 
+             CounterBox["Reference"], "]"}], 
+          CellMargins -> {{20, 10}, {7, 7}}, 
+          CounterIncrements -> {"Reference", 1}]}, Closed]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell[
+      "Others", "Section", 
+       CellChangeTimes -> {{3.443916926560617*^9, 3.4439169279993553`*^9}, {
+        3.469269419329535*^9, 3.469269424322864*^9}, {3.469271823780828*^9, 
+        3.469271825171331*^9}, {3.474583951374827*^9, 3.47458395192933*^9}}], 
+      
+      Cell[
+       StyleData["CompleteThis"], CellDingbat -> "\[Wolf]", FontColor -> 
+       RGBColor[1, 0, 0], $CellContext`MenuPosition -> 10000], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Warning"], CellDingbat -> "\[WarningSign]", 
+          CellMargins -> {{36, 24}, {Inherited, Inherited}}, 
+          LineSpacing -> {1, 3}, $CellContext`MenuPosition -> 1560], 
+         Cell[
+          StyleData["Warning", "SlideShow"], CellDingbat -> "\[WarningSign]", 
+          CellMargins -> {{36, 24}, {Inherited, Inherited}}, 
+          LineSpacing -> {1, 3}, FontSize -> 20, $CellContext`MenuPosition -> 
+          1560]}, Closed]], 
+      Cell[
+       StyleData["MathCaption"], WholeCellGroupOpener -> True, 
+       CellGroupingRules -> {"SectionGrouping", 80}, MenuSortingValue -> 
+       10000]}, Open]], 
+   Cell[
+    CellGroupData[{
+      Cell[
+      "Exercises", "Section", 
+       CellChangeTimes -> {{3.443917031568693*^9, 3.4439170337125263`*^9}}], 
+      Cell[
+       StyleData["Exercise"], CellDingbat -> TextData[{"Exercise ", 
+          CounterBox["Exercise"], ":  "}], 
+       CellMargins -> {{Inherited, 2}, {6, 6}}, 
+       CellElementSpacings -> {"ClosedGroupTopMargin" -> 8}, 
+       CellGroupingRules -> {"SectionGrouping", 50}, CounterIncrements -> 
+       "Exercise", FontFamily -> "Arial", FontSize -> 12, FontWeight -> 
+       "Bold", $CellContext`MenuPosition -> 1550, $CellContext`MenuCommandKey -> 
+       "6"], 
+      Cell[
+       StyleData["Subexercise"], CellDingbat -> TextData[{"Exercise ", 
+          CounterBox["Exercise"], ".", 
+          CounterBox["Subexercise"], ":  "}], 
+       CellMargins -> {{Inherited, 2}, {6, 6}}, 
+       CellElementSpacings -> {"ClosedGroupTopMargin" -> 8}, 
+       CellGroupingRules -> {"SectionGrouping", 51}, CounterIncrements -> 
+       "Subexercise", FontFamily -> "Arial", FontSize -> 12, FontWeight -> 
+       "Bold", $CellContext`MenuPosition -> 1551], 
+      Cell[
+       StyleData["Solution"], ShowGroupOpener -> True, 
+       CellMargins -> {{36, 4}, {6, 12}}, 
+       CellElementSpacings -> {"ClosedGroupTopMargin" -> 4}, 
+       CellGroupingRules -> {"SectionGrouping", 55}, CounterIncrements -> 
+       "Subsubsection", CounterAssignments -> {{"Subsubsection", 0}}, 
+       FontFamily -> "Helvetica", FontWeight -> 
+       "Bold", $CellContext`MenuPosition -> 1552]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell[
+      "Assignments", "Section", 
+       CellChangeTimes -> {{3.443916926560617*^9, 3.4439169279993553`*^9}, {
+        3.469269419329535*^9, 3.469269424322864*^9}, {3.469271823780828*^9, 
+        3.469271825171331*^9}, {3.474583951374827*^9, 3.47458395192933*^9}, {
+        3.474585935039929*^9, 3.47458593716241*^9}}], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["MarkersComment"], CellFrame -> False, CellDingbat -> 
+          "\[FilledCircle]", 
+          CellMargins -> {{54, 25}, {Inherited, Inherited}}, 
+          LineSpacing -> {1, 3}, CounterIncrements -> "Text", FontColor -> 
+          RGBColor[0.5, 0.5, 0], Background -> 
+          GrayLevel[1], $CellContext`MenuPosition -> 9000], 
+         Cell[
+          StyleData["MarkersComment", "Printout"], 
+          CellMargins -> {{18, 4}, {Inherited, 0}}, LineSpacing -> {1, 3}, 
+          FontSize -> 10]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["AssignmentMark"], Deletable -> False, CellFrame -> True, 
+          CellMargins -> {{54, 25}, {Inherited, Inherited}}, CellFrameColor -> 
+          RGBColor[1, 0, 0], LineSpacing -> {1, 3}, CounterIncrements -> 
+          "Text", FontColor -> RGBColor[1, 0, 0], Background -> 
+          GrayLevel[1], $CellContext`MenuPosition -> 2510], 
+         Cell[
+          StyleData["AssignmentMark", "Printout"], Deletable -> False, 
+          CellFrame -> True, CellMargins -> {{18, 4}, {Inherited, 0}}, 
+          LineSpacing -> {1, 3}, FontSize -> 10]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ExerciseMark"], CellFrame -> False, CellDingbat -> 
+          "\[FilledCircle]", 
+          CellMargins -> {{54, 25}, {Inherited, Inherited}}, 
+          LineSpacing -> {1, 3}, CounterIncrements -> "Text", FontColor -> 
+          RGBColor[1, 0, 0], Background -> 
+          GrayLevel[1], $CellContext`MenuPosition -> 2520], 
+         Cell[
+          StyleData["ExerciseMark", "Printout"], 
+          CellMargins -> {{18, 4}, {Inherited, 0}}, LineSpacing -> {1, 3}, 
+          FontSize -> 10]}, Closed]]}, Closed]]}, Visible -> False, 
+  FrontEndVersion -> "13.1 for Mac OS X x86 (64-bit) (June 16, 2022)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"2f5f0625-6d6b-4e47-bd38-439df97a6c62"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[1510, 35, 280, 4, 56, "Title",ExpressionUUID->"07138757-1cd0-47bf-a66d-303753bf4cac",
+ CounterAssignments->{{"Section", 0}, {"Subsection", 0}, {"Chapter", 2}}],
+Cell[1793, 41, 466, 12, 68, "Subsubsubsection",ExpressionUUID->"5728a644-f033-4c00-84d7-019ea1753320",
+ CounterAssignments->{{"Section", 0}, {"Subsection", 0}}],
+Cell[CellGroupData[{
+Cell[2284, 57, 334, 5, 65, "Section",ExpressionUUID->"5b09d4c0-6733-4d9f-8f26-d0a86261bc51"],
+Cell[2621, 64, 270, 7, 40, "Item",ExpressionUUID->"442a157a-f7be-4e36-93f6-ba3599453ea6"],
+Cell[2894, 73, 217, 6, 40, "Item",ExpressionUUID->"d9c5bc91-8d7b-49e9-ae46-1e6b4eaf0db5"],
+Cell[3114, 81, 325, 11, 40, "Item",ExpressionUUID->"71b8f2b8-aa25-4d57-a705-6ca49e339dd0"],
+Cell[3442, 94, 403, 11, 40, "Item",ExpressionUUID->"09dd61a8-9475-4ac5-9f15-5106357f4de3"],
+Cell[3848, 107, 359, 10, 40, "Item",ExpressionUUID->"e184484c-8f45-4d4e-b547-95a9dbfc9242"],
+Cell[4210, 119, 483, 15, 40, "Item",ExpressionUUID->"86005c61-3aad-4900-b1fb-42a8937bf571"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4730, 139, 206, 4, 65, "Section",ExpressionUUID->"ed777865-6b98-4d4e-9683-0a07fecc892d"],
+Cell[4939, 145, 324, 5, 40, "Item",ExpressionUUID->"578a76fa-e9ee-46b3-9447-3bf3672d0251"],
+Cell[5266, 152, 458, 8, 40, "Item",ExpressionUUID->"9cdcb8ad-c5cc-47c1-8f33-2dcd82c378e6"],
+Cell[5727, 162, 327, 5, 40, "Item",ExpressionUUID->"2691d9e0-2e1c-4a4c-b2a7-936b01bb922f"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[6091, 172, 185, 4, 65, "Section",ExpressionUUID->"53b267a1-41a8-4de6-a970-08d653124e7e"],
+Cell[6279, 178, 770, 13, 73, "Text",ExpressionUUID->"3e5c5c90-d125-41d9-905b-e2a8df6e61d2"],
+Cell[CellGroupData[{
+Cell[7074, 195, 253, 4, 67, "Subsection",ExpressionUUID->"3fa2834e-c17d-4995-bd73-38410fdda714"],
+Cell[CellGroupData[{
+Cell[7352, 203, 186, 3, 56, "Subsubsection",ExpressionUUID->"99b8d248-8b06-4749-b457-2e8aae6f9f66"],
+Cell[7541, 208, 280, 4, 40, "Item",ExpressionUUID->"d6f79c13-87ff-43a4-855a-87bb7673d9ae"],
+Cell[7824, 214, 360, 6, 40, "Item",ExpressionUUID->"d43a8948-4e93-4ce3-af50-94d5405c1ff2"],
+Cell[8187, 222, 227, 4, 40, "Item",ExpressionUUID->"1c19c341-447c-4de8-a373-26e44eb3604d"],
+Cell[8417, 228, 204, 4, 40, "Item",ExpressionUUID->"15efe0e0-fafd-4db7-92be-e5e91498daae"],
+Cell[8624, 234, 182, 3, 40, "Item",ExpressionUUID->"7def4c68-1832-4c10-aeba-a6747a5093d7"],
+Cell[8809, 239, 285, 5, 40, "Item",ExpressionUUID->"86ee177f-e9e5-427f-88bb-4341040fd4f8"],
+Cell[9097, 246, 282, 5, 40, "Item",ExpressionUUID->"d5764c90-413b-4759-b09c-cde423c67ca5"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[9416, 256, 327, 6, 45, "Subsubsection",ExpressionUUID->"0ec9b3e1-f004-4a8f-9a15-c1693a805625"],
+Cell[9746, 264, 274, 9, 40, "Item",ExpressionUUID->"a00a7143-0672-4d2f-975c-26ea7805ef7a"],
+Cell[10023, 275, 457, 11, 40, "Item",ExpressionUUID->"b77ec2a0-9645-4ce9-94be-4b5d7a64ee8d"],
+Cell[10483, 288, 625, 14, 42, "Item",ExpressionUUID->"e7861c14-e3c3-4106-9913-4e5eaf6dad5c"],
+Cell[11111, 304, 411, 6, 40, "Item",ExpressionUUID->"79151239-2290-4892-98f1-d5c4a212f53f"],
+Cell[11525, 312, 399, 9, 40, "Item",ExpressionUUID->"447ac0c5-ed18-4bda-b317-c1e17b921199"]
+}, Closed]]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
